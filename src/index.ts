@@ -1,13 +1,13 @@
-import express from 'express';
+import Express from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app = express();
+const app = Express();
 
 const port = process.env.PORT ?? 8000;
 
-interface apiObject {
+interface ApiObject {
 	ok: boolean,
 	msg: string
 }
@@ -18,7 +18,7 @@ app.get('/', (_req, res) => {
 
 app.get('/api', (_req, res) => {
 
-	const apiStatus: apiObject = {
+	const apiStatus: ApiObject = {
 		ok: true,
 		msg: 'Todo esta bien, no se ha caido el backend',
 	}
